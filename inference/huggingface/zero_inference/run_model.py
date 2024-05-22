@@ -276,6 +276,7 @@ def run_generation(
 
     prefill_throughput = batch_size * prompt_len / prefill_latency
     decode_latency = total_latency - prefill_latency
+    print(decode_latency)
     decode_throughput = batch_size * (gen_len - 1) / max(decode_latency, 1e-10)
     num_generated_tokens = batch_size * gen_len
     total_throughput = num_generated_tokens / total_latency
