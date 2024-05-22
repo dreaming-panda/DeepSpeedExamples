@@ -1,7 +1,7 @@
 #!/bin/sh
 export USE_TF=0 
 BASE_LOG_DIR=~/experiments/zero_inference/
-MODEL_NAME="Llama-2-70b-chat-hf"
+MODEL_NAME="Meta-Llama-3-70B-Instruct"
 FULL_MODEL_NAME="meta-llama/${MODEL_NAME}"
 
 
