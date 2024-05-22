@@ -248,6 +248,7 @@ def run_generation(
         with torch.no_grad():
             set_model_stage(model, "prefill")
             output_ids = model.generate(**input_tokens, **generate_kwargs)
+            print(output_ids.shape)
             prefill_timings.append(model.__duration__)
         timer.stop(sync_func=get_accelerator().synchronize)
     costs = timers("generate-forward").costs
